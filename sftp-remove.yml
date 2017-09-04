@@ -1,0 +1,9 @@
+---
+- name: Terminate EC2 box
+  hosts: localhost
+  connection: local
+  gather_facts: true
+  pre_tasks:
+  - include_vars: ec2_vars/{{type}}.yml
+  roles:
+  - remove-sftp

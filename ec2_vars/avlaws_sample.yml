@@ -1,0 +1,18 @@
+# Usually you don't need to configure these unless you want to change region or CIDR
+vpc_id: "vpc-5fae143a"
+subnet_cidr: "172.31.16.0/20"
+ec2_instance_type: "t2.micro"
+ec2_image: "ami-1eb3ac7d"
+ec2_region: "ap-southeast-2"
+ec2_attached_role: "sftp-server-s3-ses-access"
+ec2_tag_Name: "Sftp Server Ansible"
+ec2_tag_Type: "Sftp Server Ansible"
+ec2_tag_Environment: "development"
+ec2_volume_size: 16
+
+# Configure the following based on your own setup
+ec2_keypair: ""
+email: ""
+avlusername: ""
+aws_access_key: ""
+aws_secret_key: ""

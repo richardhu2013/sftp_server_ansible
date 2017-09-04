@@ -1,0 +1,13 @@
+
+  - name: Install pexpect for interactive usage
+    command: sudo pip install pexpect
+
+  - name: Run sftpgatewaysetup
+    command: sudo sftpgatewaysetup
+
+  - name: Create sftp user
+    expect:
+      command: sudo addsftpuser {{ avlusername }}
+      responses:
+        (?i)new SSH key for user: "y"
+        (?i)receive private key: "{{ email }}"
